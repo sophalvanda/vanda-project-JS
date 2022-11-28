@@ -1,0 +1,68 @@
+.header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/homepage.png);
+    background-size: cover;
+    color: white;
+}
+.header h1{
+    font-size: 50px;
+    margin-top: -10%;
+}
+.input{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+}
+.input #menu {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    padding: 10px;
+    color: gray;
+    width: 40%;
+}
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+
+}
+.courses .slide{
+    width: 5rem;
+    background-color: gray;
+    border-radius: .5rem;
+    text-align: center;
+    /* padding: 2rem; */
+    margin-bottom: 4rem;
+    user-select: none;
+}
+.courses .slide img{
+    /* height: 25rem; */
+    width: 50%;
+}
+.courses .slide h3{
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    color: var(--white);
+}
+.courses .slide p{
+    line-height: 2;
+    font-size: 1rem;
+    color: var(--light-white);
+}
+.courses .slide .img{
+    display: flex;
+    flex-direction: column;
+}
+.courses .slide .img img{
+    width: 5%;
+}
