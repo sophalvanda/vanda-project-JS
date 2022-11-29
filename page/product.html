@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/navbar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/product.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
+
 <body>
     <nav>
         <div class="nav-left">
@@ -26,6 +29,10 @@
             <button> <a href="">Card</a></button>
             <button> <a href="">Sign in</a></button>
             <i class="material-icons" id="menu">menu</i>
+            <div class="mode">
+                <div class="light" onclick="changeToLight()"><i class="fa fa-moon-o"></i></div>
+                <div class="dark" onclick="changeToDark()"><i class="fa fa-sun-o"></i></div>
+            </div>
         </div>
     </nav>
     <div class="header">
@@ -36,65 +43,280 @@
             <button> <i class="material-icons" id="menu">search</i></button>
         </div>
     </div>
-    <h1 class="title">coursess</h1>
-    <section id="courses" class="courses">
-        <div class="swiper courses-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide slide">
-                    <img src="../img/T-shirt.png" alt="">
-                    <h3>T-courses</h3>
-                    <div class="icon">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                    </div>
-                    <p class="price">30$</p>
-                    <!-- <div class="img">
-                        <img src="../img/buy.png" alt="">
-                        <img src="../img/view.png" alt="">
-                    </div> -->
-                </div>
-                <div class="swiper-slide slide">
-                    <img src="../img/T-shirt.png" alt="">
-                    <h3>T-courses</h3>
-                    <div class="icon">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                    </div>
-                    <p class="price">30$</p>
-                    <!-- <div class="img">
-                        <img src="../img/buy.png" alt="">
-                        <img src="../img/view.png" alt="">
-                    </div> -->
-                </div>
-                <div class="swiper-slide slide">
-                    <img src="../img/T-shirt.png" alt="">
-                    <h3>T-courses</h3>
-                    <div class="icon">
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                        <i class="material-icons">star</i>
-                    </div>
-                    <p class="price">30$</p>
-                    <!-- <div class="img">
-                        <img src="../img/buy.png" alt="">
-                        <img src="../img/view.png" alt="">
-                    </div> -->
-                </div>
+    <div class="title">
+        <h1 id="title">Shirts</h1>
+    </div>
+    <div class="scrolling-wrapper">
+        <div class="card">
+            <img src="../img/T-shirt.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
             </div>
-            <div class="swiper-pagination"></div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href="detail.html"><img src="../img/view.png" alt=""></a>
+            </div>
         </div>
-    </section>
+        <div class="card">
+            <img src="../img/T-shirt.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/T-shirt.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/T-shirt.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/T-shirt.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+    </div>
 
+    <div class="main">
+        <div class="main-left">
+            <img src="../img/vanda1.png" alt="">
+        </div>
+        <div class="main-center">
+            <h1>Feshion Style</h1>
+            <p>Fashion is important because it reflects the culture of a country. It makes our life colourful and
+                changes our life with time. In a way it also adds variety to life, providing an opportunity in trying
+                out something new.Fashion has the ability to change and shape lives through its personal connection to
+                us all. We all have to wear clothes and every piece of clothing we buy represents a personal choice it
+                is this intrinsically human relationship between us and our fashion that makes it political.</p>
+        </div>
+        <div class="main-right">
+            <img src="../img/vanda2.png" alt="">
+        </div>
+    </div>
 
+    <div class="title">
+        <h1 id="title">Pants</h1>
+    </div>
+    <div class="scrolling-wrapper">
+        <div class="card">
+            <img src="../img/pants.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/pants.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/pants.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/pants.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/pants.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+    </div>
 
+    <div class="title">
+        <h1 id="title">Pants</h1>
+    </div>
+    <div class="scrolling-wrapper" id="scrolling-wrapper">
+        <div class="card" id="card">
+            <img src="../img/shose.png" alt="">
+            <h3>shose</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card" id="card">
+            <img src="../img/shose.png" alt="">
+            <h3>shose</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card" id="card">
+            <img src="../img/shose.png" alt="">
+            <h3>shose</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card" id="card">
+            <img src="../img/shose.png" alt="">
+            <h3>shose</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+        <div class="card" id="card">
+            <img src="../img/shose.png" alt="">
+            <h3>T-Stirt</h3>
+            <div class="icon">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </div>
+            <p class="price">30$</p>
+            <div class="img" id="view">
+                <a href=""><img src="../img/buy.png" alt=""></a>
+                <a href=""><img src="../img/view.png" alt=""></a>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -104,15 +326,15 @@
             <div class="footer-top-left">
                 <h3>Contact us</h3>
                 <div class="logo">
-                    <img src="../img/phone.png" alt="">
+                    <i class="material-icons" id="menu">phone</i>
                     <p>+885 71-25-40-816</p>
                 </div>
                 <div class="logo">
-                    <img src="../img/telegram.png" alt="">
+                    <i class="material-icons" id="menu">send</i>
                     <p>+885 71-25-40-816</p>
                 </div>
                 <div class="logo">
-                    <img src="../img/email.png" alt="">
+                    <i class="material-icons" id="menu">mail</i>
                     <p>V&donlineshop@gmail.com</p>
                 </div>
             </div>
@@ -120,9 +342,9 @@
                 <h3>Address</h3>
                 <div class="logo">
                     <div id="home">
-                        <img src="../img/address.png" alt="" id="home">
+                        <i class="material-icons" id="home">home</i>
                     </div>
-                    <p>BP 511 St. 371 Phum Tropeang Chhuk (Borey Sorla)
+                    <p id="p">BP 511 St. 371 Phum Tropeang Chhuk (Borey Sorla)
                         Sangkat Tek Thla, Khan Sen Sok
                         Phnom Penh CAMBODIA
                     </p>
@@ -131,15 +353,15 @@
             <div class="footer-top-right">
                 <h3>Services</h3>
                 <div class="logo">
-                    <img src="../img/text.png" alt="">
+                    <i class="material-icons" id="menu">check_circle</i>
                     <p>Easy to order</p>
                 </div>
                 <div class="logo">
-                    <img src="../img/text.png" alt="">
+                    <i class="material-icons" id="menu">check_circle</i>
                     <p>Easy to pay</p>
                 </div>
                 <div class="logo">
-                    <img src="../img/text.png" alt="">
+                    <i class="material-icons" id="menu">check_circle</i>
                     <p>Get product faster</p>
                 </div>
             </div>
@@ -154,4 +376,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="../js/product.js"></script>
 </body>
+<script src="../js/navbar.js"></script>
 </html>

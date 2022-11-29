@@ -1,0 +1,65 @@
+.detail{
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-evenly;
+}
+.share-center .logo-share img{
+    width: 20%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+/* img{
+    width: 10%;
+} */
+.share{
+    display: flex;
+}
+.share img{
+    width: 10%;
+}
+.pay img{
+    width: 10%;
+}
+.detail-center{
+    margin-left: 10%;
+}
+.detail-center p{
+    color: gray;
+}
+#border{
+    border-bottom: 1px solid gray;
+}
+.detail-right{
+    margin-left: 2%;
+    text-align: center;
+    margin-right: 2%;
+    padding: 20px;
+    margin-bottom: 10%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+.share-right img{
+    width: 50%;
+}
+.share-center h2{
+    font-size: 25px;
+}
+.detail-right h1,
+.detail-right h2,
+.detail-right .pay{
+    line-height: 3rem;
+}
+.detail-right button{
+    margin-top: 5%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: orange;
+}
+.icon i{
+    font-size: 20px;
+    color: orange;
+}
+span{
+    color: red;
+}
