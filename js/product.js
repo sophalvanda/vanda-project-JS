@@ -46,22 +46,22 @@ function loadData() {
     products = getLocal;
 }
 function displayProducts() {
-    loadData()
-    let container = document.querySelector(".scrolling-wrapper")
-    console.log(products)
-    for (let product of products) {
+  loadData()
+  let container = document.querySelector(".scrolling-wrapper");
+
+  for (let product of products) {
     let card = document.createElement("div");
     card.className = "card";
 
     let img = document.createElement("img");
-    img.src = product.img
+    img.id = "img"
+    img.src = product.img;
 
     let nameProduct = document.createElement("h3");
-    nameProduct.textContent = product.name + product.id
-
+    nameProduct.textContent = product.name ;
+    
     let icon = document.createElement("div");
     icon.className = "icon";
-
     let star1 = document.createElement("i");
     star1.className = "material-icons";
     star1.textContent = "star"
@@ -71,34 +71,52 @@ function displayProducts() {
     let star3 = document.createElement("i");
     star3.className = "material-icons";
     star3.textContent = "star"
+    let star4 = document.createElement("i");
+    star4.className = "material-icons";
+    star4.textContent = "star"
+    let star5 = document.createElement("i");
+    star5.className = "material-icons";
+    star5.textContent = "star"
 
-
-    let price = document.createElement("p");
-    price.textContent = product.price
-
-    let viewProduct = document.createElement("div");
-    viewProduct.className = "img";
-    viewProduct.id = "img";
-
-    
-    viewProduct.appendChild(buy)
-    viewProduct.appendChild(view)
 
     icon.appendChild(star1);
     icon.appendChild(star2);
     icon.appendChild(star3);
+    icon.appendChild(star4);
+    icon.appendChild(star5);
+
+    let price = document.createElement("p");
+    price.className = "price";
+    price.textContent = product.price +" "+ product.currency;
+
+    let button = document.createElement("div");
+    button.className = "img";
+    button.id = "view";
+
+    let buy_btn = document.createElement("img");
+    buy_btn.src = "../img/buy.png"
+    button.appendChild(buy_btn);
+
+    let view_btn = document.createElement("img");
+    view_btn.src = "../img/view.png";
+    button.appendChild(view_btn);
 
 
-    card.appendChild(img)
-    card.appendChild(nameProduct)
-    card.appendChild(price)
-    card.appendChild(icon)
-    card.appendChild(viewProduct)
-    card.appendChild(edit)
+
+    card.appendChild(img);
+    card.appendChild(nameProduct);
+    card.appendChild(icon);
+    card.appendChild(price);
+    card.appendChild(button);
 
     container.appendChild(card)
+    console.log(container)
+    
+    
   }
+    
 
 }
 displayProducts()
+saveProduct()
 loadData()
