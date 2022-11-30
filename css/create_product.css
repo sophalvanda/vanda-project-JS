@@ -240,17 +240,10 @@ dialog input{
 
 /* table {========== */
 table{
-    /* border: 1px solid black; */
-    border-collapse:collapse ;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content: center;
-    align-items: center; */
-    /* padding: 10px; */
-    margin-left: 7%;
-    margin-right: 5%;
 
-    /* width: 100%; */
+    border-collapse:collapse ;
+    margin-left: 15%;
+    margin-right: 20%;
     margin-bottom: 5%;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -262,8 +255,9 @@ tr{
 }
 th,td{
     border: 1px solid black;
-    padding: 10px 90px 10px 90px;
-
+    padding: 10px 80px 10px 80px;
+    /* border: none; */
+    
 }
 .image img{
     width: 70%;
@@ -274,16 +268,27 @@ th,td{
     align-items: center;
     /* border: none; */
     padding-bottom: 12.5%;
+    /* margin-left: 100%; */
 }
 .action img{
     border-bottom: 1 solid black;
-    width: 30%;
+    width: 80%;
     padding: 10px;
     border-radius: 10px;
     /* background-color: #fff; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 15%;
+    margin-right: 30%;
 }
 .action img:hover{
     cursor: pointer;
     background-color: orange;
+}
+/* .star_icon{
+
+    display: flex;
+    flex-direction: row;
+} */
+.star_icon i{
+    font-size: 11px;
 }

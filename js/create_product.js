@@ -3,39 +3,46 @@ const dom_view = document.querySelector("#add_product");
 let products = [
   {
     "id": 0,
-    "img": "https://o.remove.bg/downloads/885553cc-55cf-4be2-aaf5-38e4ac1e1ebd/T-shirt-removebg-preview.png",
+    "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
     "name": "T-shirt",
-    "price": "10$"
+    "price": "10",
+    "currency": "USD"
   },
   {
     "id": 1,
-    "img": "https://o.remove.bg/downloads/885553cc-55cf-4be2-aaf5-38e4ac1e1ebd/T-shirt-removebg-preview.png",
+    "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
     "name": "T-shirt",
-    "price": "30$"
+    "price": "30",
+    "currency": "USD"
   },
   {
     "id": 2,
-    "img": "https://o.remove.bg/downloads/885553cc-55cf-4be2-aaf5-38e4ac1e1ebd/T-shirt-removebg-preview.png",
+    "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
     "name": "T-shirt",
-    "price": "20$"
+    "price": "20",
+    "currency": "USD"
   },
   {
     "id": 3,
-    "img": "https://o.remove.bg/downloads/885553cc-55cf-4be2-aaf5-38e4ac1e1ebd/T-shirt-removebg-preview.png",
+    "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
     "name": "T-shirt",
-    "price": "20$"
+    "price": "20",
+    "currency": "USD"
   },
   {
     "id": 4,
-    "img": "https://o.remove.bg/downloads/885553cc-55cf-4be2-aaf5-38e4ac1e1ebd/T-shirt-removebg-preview.png",
+    "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
     "name": "T-shirt",
-    "price": "20$"
+    "price": "20",
+    "currency": "USD"
   }
 ]
 const container = document.querySelector(".scrolling-wrapper")
 let createBtn = document.querySelector('#create');
 let productInput = document.querySelector('.product');
 let priceInput = document.querySelector('.price')
+let currencyInput = document.querySelector(".currency");
+let imageInput = document.querySelector(".img_product")
 let canCreate = true;
 let indexProduct = products.length;
 
@@ -84,24 +91,11 @@ function displayProducts() {
         tr_table.appendChild(price);
 
 
-        let icon = document.createElement("td");
-        icon.className = "icon";
-        tr_table.appendChild(icon);
+        let currency = document.createElement("td");
+        currency.className = "price";
+        currency.textContent = product.currency
+        tr_table.appendChild(currency);
 
-        let star1 = document.createElement("i");
-        star1.className = "material-icons";
-        star1.textContent = "star";
-        let star2 = document.createElement("i");
-        star1.className = "material-icons";
-        star1.textContent = "star";
-        let star3 = document.createElement("i");
-        star1.className = "material-icons";
-        star1.textContent = "star";
-
-
-        icon.appendChild(star1);
-        icon.appendChild(star2);
-        icon.appendChild(star3);
 
         let action = document.createElement("td");
         action.className = "action";
@@ -200,6 +194,8 @@ function displayProducts() {
 function clearInput() {
   productInput.value = '';
   priceInput.value='';
+  currencyInput.value = '';
+  imageInput.value = '';
 }
 function editPro(event) {
     let index = event.target.parentElement.parentElement.dataset.index;
@@ -208,33 +204,30 @@ function editPro(event) {
     show(dom_dialog);
     productInput.value = product.name;
     priceInput.value = product.price;
+    currencyInput.value = product.currency;
+    imageInput.value = product.img;
     products.splice(index, 1);
     console.log(product)
     createBtn.textContent = 'Edit'
 }
 function createPro() {
-//   console.log('test',test);
   hide(dom_dialog);
   let objCreate =
   {
     "id": 0,
     "img": "",
     "name": "",
-    "price": ""
+    "price": "",
+    "currency": "",
   }
   objCreate.id = products.length
   objCreate.price = priceInput.value
   objCreate.name = productInput.value
+  objCreate.currency = currencyInput.value
+  objCreate.img = imageInput.value
   products.splice(indexProduct, 0, objCreate);
   saveProduct();
 
-//   if (canCreate){
-//     products.push(objCreate)
-//   }
-//   else{
-//     products[test] = objCreate
-
-//   }
   displayProducts();
   clearInput();
 
@@ -250,7 +243,7 @@ let editProduct = document.querySelectorAll(".delete .edit");
 
 
 
-// console.log(editProduct);
+
 editProduct.forEach((element,id) => {
   element.addEventListener("click",function () {
     editPro(id)

@@ -44,7 +44,7 @@
                 <h1>Add Products</h1><br><br>
                 <div class="input">
                     <p>image</p>
-                    <input type="file" >
+                    <input type="text" class="img_product" placeholder="Image product">
                 </div><br>
                 <div class="input">
                     <p>Name Product</p>
@@ -52,12 +52,12 @@
                 </div><br>
                 <div class="input">
                     <p>Price</p>
-                    <input type="text" class="price" placeholder="price">
+                    <input type="number" class="price" placeholder="price">
                 </div><br>
-                <div class="img">
-                    <input type="file"><br><br>
-                    <input type="file">
-                </div>
+                <div class="input">
+                    <p>Currency</p>
+                    <input type="text" class="currency" placeholder="Currency">
+                </div><br>
                 <div class="btn">
                     <button id="right">Cancel</button>
                     <button id="create" >Create</button>
@@ -92,7 +92,7 @@
                 <th>Image of product</th>
                 <th>Name product</th>
                 <th>Price</th>
-                <th>review</th>
+                <th>Currency</th>
                 <th>Action</th>
               </tr>
             </thead>
