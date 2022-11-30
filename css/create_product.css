@@ -1,4 +1,5 @@
-body{
+
+/* body{
     width: 100%;
 }
 .update{
@@ -60,7 +61,6 @@ body{
   width: 29%;
   height: 70vh;
   font-size: 2rem;
-  /* margin-right: 2%; */
   padding-right: -100px;
   margin: 2%;
   border-radius: 10px;
@@ -106,7 +106,6 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: -85%;
-    /* margin-left: -45%; */
 }
 #view img{
     margin: 1%;
@@ -136,32 +135,41 @@ body{
 }
 #delete{
     margin-left: 70%;
-}
+} */
 .delete img:hover{
     background-color: orange;
 }
 
-.diolog{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
-    background-color: #fff;
-    width: 50%;
-    margin-left: 25%;
-    padding: 20px;
+dialog{
+    margin-left: 30%;
     margin-top: 5%;
-    height: 70vh;
+    width: 40%;
+    padding: 40px;
     border-radius: 10px;
+    
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .diolog h1{
     border-bottom: 1px solid black;
+    /* margin-left: 100%; */
+    text-align: center;
+}
+.diolog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+}
+dialog input{
+    width: 100%;
 }
 .diolog input{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     padding: 10px;
-    width: 100%;
+    /* width: 100%; */
 }
 .diolog .btn{
     display: flex;
@@ -179,4 +187,103 @@ body{
 }
 .diolog .btn #right{
     margin-right: 10%;
+}
+
+
+
+
+
+
+/* #=======================NEw style */
+.scrolling-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.card {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(125, 68, 68);
+    margin-top: 2%;
+    width: 80%;
+    border-radius: 10px;
+}
+.card img{
+    width: 10%;
+}
+.img img{
+    width: 2%;
+}
+.delete img{
+    width: 5%;
+}
+
+
+#add_product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    /* background-color: #fff; */
+}
+#add_product h2{
+    margin-left: 5%;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+/* table {========== */
+table{
+    /* border: 1px solid black; */
+    border-collapse:collapse ;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center;
+    align-items: center; */
+    /* padding: 10px; */
+    margin-left: 7%;
+    margin-right: 5%;
+
+    /* width: 100%; */
+    margin-bottom: 5%;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+    
+
+tr{
+    width: 100%;
+}
+th,td{
+    border: 1px solid black;
+    padding: 10px 90px 10px 90px;
+
+}
+.image img{
+    width: 70%;
+}
+.action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: none; */
+    padding-bottom: 12.5%;
+}
+.action img{
+    border-bottom: 1 solid black;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    /* background-color: #fff; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.action img:hover{
+    cursor: pointer;
+    background-color: orange;
 }

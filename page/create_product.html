@@ -33,109 +33,127 @@
             </div>
         </div>
     </nav>
-    <div id="add_product">
-        <h2>ADD SHIRT</h2>
-        <h2>ADD PANTS</h2>
-        <h2>ADD SHOSES</h2>
-    </div>
-    <div class="diolog">
-        <h1>Add Products</h1><br><br>
-        <div class="input">
-            <p>image</p>
-            <input type="file" >
-        </div><br>
-        <div class="input">
-            <p>Name Product</p>
-            <input type="text" class="product" placeholder="name product">
-        </div><br>
-        <div class="input">
-            <p>Price</p>
-            <input type="text" class="price" placeholder="price">
-        </div><br>
-        <div class="img">
-            <input type="file"><br><br>
-            <input type="file">
+    <div class="id">
+        <div id="add_product">
+            <h2>ADD SHIRT</h2>
+            <h2>ADD PANTS</h2>
+            <h2>ADD SHOSES</h2>
         </div>
-        <div class="btn">
-            <button id="right">Cancel</button>
-            <button id="create" >Create</button>
+        <div class="diolog" style="display: none;">
+            <dialog open>
+                <h1>Add Products</h1><br><br>
+                <div class="input">
+                    <p>image</p>
+                    <input type="file" >
+                </div><br>
+                <div class="input">
+                    <p>Name Product</p>
+                    <input type="text" class="product" placeholder="name product">
+                </div><br>
+                <div class="input">
+                    <p>Price</p>
+                    <input type="text" class="price" placeholder="price">
+                </div><br>
+                <div class="img">
+                    <input type="file"><br><br>
+                    <input type="file">
+                </div>
+                <div class="btn">
+                    <button id="right">Cancel</button>
+                    <button id="create" >Create</button>
+                </div>
+            </dialog>
         </div>
-    </div>
-    <div class="scrolling-wrapper">
-        <!-- <div class="card">
-            <img src="../img/T-shirt.png" alt="">
-            <h3>T-Stirt</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="detail.html"><img src="../img/view.png" alt=""></a>
-            </div>
-            <div class="delete">
-                <img src="../img/edit.png" alt="">
-                <img src="../img/delete.png" alt="">
-            </div>
-        </div> -->
-    </div>
-    <div class="footer">
-        <div class="footer-top">
-            <div class="footer-top-left">
-                <h3>Contact us</h3>
-                <div class="logo">
-                    <i class="material-icons" id="menu">phone</i>
-                    <p>+885 71-25-40-816</p>
+        <div class="scrolling-wrapper">
+            <!-- <div class="card">
+                <img src="../img/T-shirt.png" alt="">
+                <h3>T-Stirt</h3>
+                <div class="icon">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
                 </div>
-                <div class="logo">
-                    <i class="material-icons" id="menu">send</i>
-                    <p>+885 71-25-40-816</p>
+                <p class="price">30$</p>
+                <div class="img" id="view">
+                    <a href=""><img src="../img/buy.png" alt=""></a>
+                    <a href="detail.html"><img src="../img/view.png" alt=""></a>
                 </div>
-                <div class="logo">
-                    <i class="material-icons" id="menu">mail</i>
-                    <p>V&donlineshop@gmail.com</p>
+                <div class="delete">
+                    <img src="../img/edit.png" alt="">
+                    <img src="../img/delete.png" alt="">
                 </div>
-            </div>
-            <div class="footer-top-center">
-                <h3>Address</h3>
-                <div class="logo">
-                    <div id="home">
-                        <i class="material-icons" id="home">home</i>
+            </div> -->
+        </div>
+        <table id="table">
+            <thead>
+              <tr>
+                <th>Image of product</th>
+                <th>Name product</th>
+                <th>Price</th>
+                <th>review</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody class="add_Product">
+             
+            </tbody>
+        </table>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="footer-top-left">
+                    <h3>Contact us</h3>
+                    <div class="logo">
+                        <i class="material-icons" id="menu">phone</i>
+                        <p>+885 71-25-40-816</p>
                     </div>
-                    <p id="p">BP 511 St. 371 Phum Tropeang Chhuk (Borey Sorla)
-                        Sangkat Tek Thla, Khan Sen Sok
-                        Phnom Penh CAMBODIA
-                    </p>
+                    <div class="logo">
+                        <i class="material-icons" id="menu">send</i>
+                        <p>+885 71-25-40-816</p>
+                    </div>
+                    <div class="logo">
+                        <i class="material-icons" id="menu">mail</i>
+                        <p>V&donlineshop@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-top-center">
+                    <h3>Address</h3>
+                    <div class="logo">
+                        <div id="home">
+                            <i class="material-icons" id="home">home</i>
+                        </div>
+                        <p id="p">BP 511 St. 371 Phum Tropeang Chhuk (Borey Sorla)
+                            Sangkat Tek Thla, Khan Sen Sok
+                            Phnom Penh CAMBODIA
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-top-right">
+                    <h3>Services</h3>
+                    <div class="logo">
+                        <i class="material-icons" id="menu">check_circle</i>
+                        <p>Easy to order</p>
+                    </div>
+                    <div class="logo">
+                        <i class="material-icons" id="menu">check_circle</i>
+                        <p>Easy to pay</p>
+                    </div>
+                    <div class="logo">
+                        <i class="material-icons" id="menu">check_circle</i>
+                        <p>Get product faster</p>
+                    </div>
                 </div>
             </div>
-            <div class="footer-top-right">
-                <h3>Services</h3>
-                <div class="logo">
-                    <i class="material-icons" id="menu">check_circle</i>
-                    <p>Easy to order</p>
-                </div>
-                <div class="logo">
-                    <i class="material-icons" id="menu">check_circle</i>
-                    <p>Easy to pay</p>
-                </div>
-                <div class="logo">
-                    <i class="material-icons" id="menu">check_circle</i>
-                    <p>Get product faster</p>
-                </div>
+            <div class="footer-bottom">
+                <img src="../img/fb.png" alt="">
+                <img src="../img/twiter.png" alt="" id="in">
+                <img src="../img/ig.png" alt="">
+                <img src="../img/in.png" alt="">
             </div>
-        </div>
-        <div class="footer-bottom">
-            <img src="../img/fb.png" alt="">
-            <img src="../img/twiter.png" alt="" id="in">
-            <img src="../img/ig.png" alt="">
-            <img src="../img/in.png" alt="">
         </div>
     </div>
 </body>
 <script src="../js/navbar.js"></script>
-<script src="../js/product.js"></script>
+<script src="../js/create_product.js"></script>
 </html>

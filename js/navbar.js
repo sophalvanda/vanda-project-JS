@@ -19,7 +19,7 @@ function changeToDark(){
  
 
 
-    // document.querySelector(".logo").style.backgroundColor = "#1b2a41"
+    document.querySelector("table").style.color = "white"
 
 
 
@@ -40,6 +40,8 @@ function changeToLight(){
     document.querySelector(".contact").style.color = "black"
 
     document.querySelector(".detail").style.color = "black"
+
+    document.querySelector("table").style.color = "black"
   
 }
 
