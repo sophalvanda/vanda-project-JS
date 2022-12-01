@@ -102,6 +102,16 @@ input{
     text-align: center;
     
 }
+.card1 p{
+    color: rgb(25, 222, 25);
+}
+.card1 i,
+.card i{
+    color: gold;
+}
+.card1 #img{
+    margin-top: 10%;
+}
 .card1 img{
     width: 50%;
     margin-top: 10%;

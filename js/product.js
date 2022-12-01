@@ -57,7 +57,7 @@ function displayProducts() {
   for (let product of products) {
     let card = document.createElement("div");
     card.className = "card1";
-    card.id = "#card";
+    card.id = "card";
 
     let img = document.createElement("img");
     img.id = "img"
@@ -121,7 +121,6 @@ function displayProducts() {
     card.appendChild(button);
 
     container.appendChild(card)
-    console.log(container)
     
     
   }
@@ -133,6 +132,32 @@ function displayProducts() {
 function getDetail(){
   location.href= "../page/detail.html"
 }
+
+
+
+// search for products
+let getSearch = document.querySelector(".search");
+
+getSearch.addEventListener("keyup", researchProduct);
+
+let card = document.querySelector(".scrolling").childNodes;
+console.log(card);
+function researchProduct(){
+    for (let i=1; i<card.length; i++){
+      let word = card[i].childNodes[1].textContent.toLowerCase();
+      let valueOfSearch = getSearch.value.toLowerCase();
+      if (word.indexOf(valueOfSearch)>-1){
+        card[i].style.display = "";
+      }
+      else{
+        card[i].style.display = "none";
+      }
+        
+    }
+  }
+
+  
 displayProducts()
 saveProduct()
 loadData()
+// researchProduct()
