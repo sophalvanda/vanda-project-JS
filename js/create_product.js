@@ -4,35 +4,40 @@ let products = [
   {
     "id": 0,
     "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
-    "name": "T-shirt",
+    "name": "shirt",
+    "color": "red",
     "price": "10",
     "currency": "USD"
   },
   {
     "id": 1,
-    "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
-    "name": "T-shirt",
+    "img": "https://www.pngarts.com/files/5/Plain-Pink-T-Shirt-Transparent-Image.png",
+    "name": "shirt ",
+    "color": "pink",
     "price": "30",
     "currency": "USD"
   },
   {
     "id": 2,
-    "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
-    "name": "T-shirt",
+    "img": "https://www.transparentpng.com/thumb/shirt/kXy7FB-yellow-shirt-clipart-png-file.png",
+    "name": "shirt",
+    "color": "yellow",
     "price": "20",
     "currency": "USD"
   },
   {
     "id": 3,
-    "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
-    "name": "T-shirt",
+    "img": "https://purepng.com/public/uploads/large/purepng.com-green-t-shirtclothingt-shirtt-shirtdressfashionclothshirt-691522330493iyjsl.png",
+    "name": "shirt",
+    "color": "green",
     "price": "20",
     "currency": "USD"
   },
   {
     "id": 4,
-    "img": "https://www.sportyfied.com/thumbs/regular/029038_35_basicactivet_f_700x700.png",
-    "name": "T-shirt",
+    "img": "https://www.pngall.com/wp-content/uploads/2016/04/Dress-Shirt-Download-PNG.png",
+    "name": "shirt",
+    "color": "blue",
     "price": "20",
     "currency": "USD"
   }
@@ -43,6 +48,7 @@ let productInput = document.querySelector('.product');
 let priceInput = document.querySelector('.price')
 let currencyInput = document.querySelector(".currency");
 let imageInput = document.querySelector(".img_product")
+let colorInput = document.querySelector(".color");
 let canCreate = true;
 let indexProduct = products.length;
 
@@ -85,6 +91,10 @@ function displayProducts() {
         let nameProduct = document.createElement("td");
         nameProduct.textContent = product.name + product.id;
         tr_table.appendChild(nameProduct);
+
+        let color = document.createElement("td");
+        color.textContent = product.color;
+        tr_table.appendChild(color)
         
         let price = document.createElement("td");
         price.textContent = product.price;
@@ -117,78 +127,6 @@ function displayProducts() {
 
     table.appendChild(tbody);
 
-
-//   for (let product of products) {
-//     let card = document.createElement("div");
-//     card.className = "card";
-
-//     let img = document.createElement("img");
-//     img.src = product.img
-
-//     let nameProduct = document.createElement("h3");
-//     nameProduct.textContent = product.name + product.id
-
-//     let icon = document.createElement("div");
-//     icon.className = "icon";
-
-//     let star1 = document.createElement("i");
-//     star1.className = "material-icons";
-//     star1.textContent = "star"
-//     let star2 = document.createElement("i");
-//     star2.className = "material-icons";
-//     star2.textContent = "star"
-//     let star3 = document.createElement("i");
-//     star3.className = "material-icons";
-//     star3.textContent = "star"
-
-
-//     let price = document.createElement("p");
-//     price.textContent = product.price
-
-//     let viewProduct = document.createElement("div");
-//     viewProduct.className = "img";
-//     viewProduct.id = "img";
-
-//     let buy = document.createElement("img");
-//     buy.src = "https://o.remove.bg/downloads/c1d36d78-b514-4cbf-ba4c-2cdaafdbf3ee/delete-removebg-preview.png"
-
-//     let view = document.createElement("img");
-//     view.src = "https://o.remove.bg/downloads/92fe0ff6-62d6-4902-8162-9ca4fec74c84/edit-removebg-preview.png"
-//     console.log(view);
-//     let edit = document.createElement("div");
-//     edit.className = "delete";
-
-//     let edit_img = document.createElement("img");
-//     edit_img.className ="edit"
-//     edit_img.src = "https://o.remove.bg/downloads/92fe0ff6-62d6-4902-8162-9ca4fec74c84/edit-removebg-preview.png";
-//     edit.appendChild(edit_img);
-
-
-//     let delete_img = document.createElement("img");
-//     delete_img.className = "trash"
-//     delete_img.src = "https://o.remove.bg/downloads/c1d36d78-b514-4cbf-ba4c-2cdaafdbf3ee/delete-removebg-preview.png";
-//     delete_img.addEventListener("click",deleteProduct)
-//     edit.appendChild(delete_img)
-
-
-//     viewProduct.appendChild(buy)
-//     viewProduct.appendChild(view)
-
-//     icon.appendChild(star1);
-//     icon.appendChild(star2);
-//     icon.appendChild(star3);
-
-
-//     card.appendChild(img)
-//     card.appendChild(nameProduct)
-//     card.appendChild(price)
-//     card.appendChild(icon)
-//     card.appendChild(viewProduct)
-//     card.appendChild(edit)
-
-//     container.appendChild(card)
-//   }
-
 }
 
 function clearInput() {
@@ -196,6 +134,7 @@ function clearInput() {
   priceInput.value='';
   currencyInput.value = '';
   imageInput.value = '';
+  colorInput.value = '';
 }
 function editPro(event) {
     let index = event.target.parentElement.parentElement.dataset.index;
@@ -206,8 +145,8 @@ function editPro(event) {
     priceInput.value = product.price;
     currencyInput.value = product.currency;
     imageInput.value = product.img;
+    colorInput.value = product.color;
     products.splice(index, 1);
-    console.log(product)
     createBtn.textContent = 'Edit'
 }
 function createPro() {
@@ -225,6 +164,8 @@ function createPro() {
   objCreate.name = productInput.value
   objCreate.currency = currencyInput.value
   objCreate.img = imageInput.value
+  objCreate.color = colorInput.value
+  
   products.splice(indexProduct, 0, objCreate);
   saveProduct();
 
