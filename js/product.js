@@ -127,6 +127,33 @@ function displayProducts() {
     
 
 }
+let getDisplayCart = document.querySelector(".display_cart")
+function displayCarts(){
+  for (let product of products){
+    let img_cart = document.createElement("img");
+    img_cart.src = product.img
+
+    let name_cart = document.createElement("text");
+
+    let name = document.createElement("div");
+    name.className = "text";
+
+    let h3 = document.createElement("h3");
+    h3.textContent = product.name
+
+    let button = document.createElement("button");
+    button.textContent = product.price;
+
+    name.appendChild(h3)
+    name.appendChild(button)
+
+
+
+
+    getDisplayCart.appendChild(img_cart);
+    getDisplayCart.appendChild(name);
+  }
+}
 
 // links to detail pages
 function getDetail(){
@@ -156,8 +183,27 @@ function researchProduct(){
     }
   }
 
-  
+// =============card============
+let cartIcon = document.querySelector(".cartIcon");
+let cart = document.querySelector(".cart");
+let close_cart = document.querySelector("#close");
+console.log(cartIcon)
+cartIcon.onclick = (event) => {
+  cart.classList.add("active");
+  cart.style.display = "block";
+  event.preventDefault();
+
+
+}
+close_cart.onclick = () => {
+  cart.classList.add("active");
+  cart.style.display = "none";
+
+}
+
+
+
 displayProducts()
-saveProduct()
-loadData()
+// saveProduct()
+// loadData()
 // researchProduct()
