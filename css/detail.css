@@ -2,6 +2,8 @@
     display: flex;
     margin-top: 10%;
     justify-content: space-evenly;
+    margin-left: 5%;
+    margin-right: 2%;
 }
 .share-center .logo-share img{
     width: 20%;
@@ -14,6 +16,10 @@
 } */
 .share{
     display: flex;
+}
+.detail-left img{
+    width: 400px;
+    margin-top: -10%;
 }
 .share img{
     width: 10%;

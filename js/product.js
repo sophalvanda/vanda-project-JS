@@ -56,6 +56,7 @@ function displayProducts() {
 
   for (let product of products) {
     let card = document.createElement("div");
+    card.dataset.index = product.id
     card.className = "card1";
     card.id = "card";
 
@@ -83,7 +84,6 @@ function displayProducts() {
     let star5 = document.createElement("i");
     star5.className = "material-icons";
     star5.textContent = "star"
-
 
     icon.appendChild(star1);
     icon.appendChild(star2);
@@ -156,7 +156,11 @@ function displayCarts(){
 }
 
 // links to detail pages
-function getDetail(){
+function getDetail(event){
+  let index = event.target.parentElement.parentElement.dataset.index;
+  let getPro = products[index]
+  console.log('index: ' ,getPro);
+  localStorage.setItem('detail',JSON.stringify(getPro));
   location.href= "../page/detail.html"
 }
 
