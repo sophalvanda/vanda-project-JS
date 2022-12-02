@@ -1,5 +1,16 @@
 //================light============
-function changeToDark(){
+function saveProduct() {
+    localStorage.setItem("products", JSON.stringify(products));
+}
+
+// Upload data
+function loadData() {
+    let getLocal = JSON.parse(localStorage.getItem("products"));
+    products = getLocal;
+}
+
+function changeToDark(event){
+    
     document.body.style.background="#1b2a41";
 
     document.querySelector(".dark").style.display = "none"
@@ -22,7 +33,6 @@ function changeToDark(){
     document.querySelector("table").style.color = "white"
 
 
-
 }
 function changeToLight(){
 
@@ -42,6 +52,7 @@ function changeToLight(){
     document.querySelector(".detail").style.color = "black"
 
     document.querySelector("table").style.color = "black"
+    
   
 }
 

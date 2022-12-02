@@ -225,6 +225,8 @@ function onClickCancel(e){
 //   displayProducts();
 
 // }
+// delet cart
+
 
 
 createBtn.addEventListener("click", createPro);

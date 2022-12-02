@@ -55,12 +55,9 @@ function loadData() {
   displayProducts(detail)
   // products = getLocal;
 }
-// function getDetail() {
-//   location.href = "../page/detail.html"
-// }
+
 
 function displayProducts(getDetail) {
-  console.log(getDetail.img);
   let detail_products = document.querySelector(".detail .detail-left");
   let stringImg = `<img src="${getDetail.img}" alt="">`
   detail_products.innerHTML = stringImg

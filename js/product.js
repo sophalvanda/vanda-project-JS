@@ -134,12 +134,12 @@ let count = 0;
 function displayCarts(event) {
   loadData()
   // for (let index in products){
+    // count++
+    // count_cart.textContent = count;
     let index = event.target.parentElement.parentElement.dataset.index;
     let product = products[index]
-    if (index){
-      count++
-      count_cart.textContent = count;
-    }
+    // if (index){
+    // }
 
     let create_cart = document.createElement("div");
     create_cart.className = "display_cart";
@@ -236,19 +236,25 @@ close_cart.onclick = () => {
 }
 //================Delete cart =================
 function delete_cart (event) {
+  // let remove_cart = document.querySelector(".display_cart")
+  let index = event.target.parentElement.parentElement.dataset.index;
+  products.splice(index, 1);
+  // remove_cart = index
+  // remove_cart.splice(index, 1)
   // let index = event.target.parentElement.parentElement.dataset.index;
-  // romve_cart.splice(index, 1)
-  let remove_cart = document.querySelector(".display_cart")
+  // remove_cart = index
   remove_cart.remove()
-  // count--
-  // count_cart.textContent = count
-  // displayCarts()
+
+  saveProduct();
+  displayProducts();
+  // let index = event.target.parentElement.parentElement.dataset.index;
+ 
 }
 
 
 
 displayProducts()
 // saveProduct()
-// loadData()
+loadData()
 // researchProduct()
 count_cart()
