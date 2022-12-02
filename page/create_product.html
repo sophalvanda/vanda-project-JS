@@ -35,9 +35,7 @@
     </nav>
     <div class="id">
         <div id="add_product">
-            <h2>ADD SHIRT</h2>
-            <h2>ADD PANTS</h2>
-            <h2>ADD SHOSES</h2>
+            <h3>ADD PRODUCT</h3>
         </div>
         <div class="diolog" style="display: none;">
             <dialog open>
@@ -51,16 +49,21 @@
                     <input type="text" class="product" placeholder="name product">
                 </div><br>
                 <div class="input">
-                    <p>Name Product</p>
+                    <p>Description</p>
                     <input type="text" class="color" placeholder="color product">
                 </div><br>
                 <div class="input">
                     <p>Price</p>
                     <input type="number" class="price" placeholder="price">
                 </div><br>
-                <div class="input">
+                <div class="currency">
                     <p>Currency</p>
-                    <input type="text" class="currency" placeholder="Currency">
+                    <!-- <input type="text" class="currency" placeholder="Currency"> -->
+                    <select name="select" id="select">
+                        <option disabled selected>currency</option>
+                        <option value="usd">USD</option>
+                        <option value="riel">Riel</option>
+                    </select>
                 </div><br>
                 <div class="btn">
                     <button id="right">Cancel</button>
@@ -68,27 +71,17 @@
                 </div>
             </dialog>
         </div>
+        <div class="dialog-delete" style="display: none;">
+            <dialog open>
+                <p>Do you want delete this product?</p>
+                <div class="button">
+                    <button class="no" onclick=" onClickCancel()">No</button>
+                    <button class="yes">Yes</button>
+                </div>
+            </dialog>
+        </div>
         <div class="scrolling-wrapper">
-            <!-- <div class="card">
-                <img src="../img/T-shirt.png" alt="">
-                <h3>T-Stirt</h3>
-                <div class="icon">
-                    <i class="material-icons">star</i>
-                    <i class="material-icons">star</i>
-                    <i class="material-icons">star</i>
-                    <i class="material-icons">star</i>
-                    <i class="material-icons">star</i>
-                </div>
-                <p class="price">30$</p>
-                <div class="img" id="view">
-                    <a href=""><img src="../img/buy.png" alt=""></a>
-                    <a href="detail.html"><img src="../img/view.png" alt=""></a>
-                </div>
-                <div class="delete">
-                    <img src="../img/edit.png" alt="">
-                    <img src="../img/delete.png" alt="">
-                </div>
-            </div> -->
+           
         </div>
         <table id="table">
             <thead>
@@ -105,6 +98,7 @@
              
             </tbody>
         </table>
+        
         <div class="footer">
             <div class="footer-top">
                 <div class="footer-top-left">

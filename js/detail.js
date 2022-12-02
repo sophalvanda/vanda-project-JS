@@ -49,7 +49,6 @@ function saveProduct() {
 // Upload data
 let detail = ""
 function loadData() {
-  console.log('dfdf');
   // let getLocal = JSON.parse(localStorage.getItem("products"));
   let getDetail = JSON.parse(localStorage.getItem('detail'))
   detail = getDetail
@@ -65,6 +64,21 @@ function displayProducts(getDetail) {
   let detail_products = document.querySelector(".detail .detail-left");
   let stringImg = `<img src="${getDetail.img}" alt="">`
   detail_products.innerHTML = stringImg
+
+  let info_of_product = document.querySelector(".detail .detail-center .name");
+  let name_of_product = document.createElement("h1");
+  name_of_product.textContent = getDetail.name;
+  info_of_product.appendChild(name_of_product)
+  
+  let infor_of_product = document.querySelector(".detail .detail-center .color");
+  let color = `<p>${getDetail.color}</p>`
+  infor_of_product.innerHTML = color;
+
+  let info_price = document.querySelector(".detail .detail-center .price");
+  let price = `<h2>${getDetail.price + " " +getDetail.currency}</h2>`
+  info_price.innerHTML = price;
+
+  
 }
 
 // displayProducts();

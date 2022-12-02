@@ -103,7 +103,8 @@ function displayProducts() {
 
 
     let buy_btn = document.createElement("img");
-    buy_btn.src = "../img/buy.png"
+    buy_btn.src = "../img/buy.png";
+    buy_btn.addEventListener("click", displayCarts)
     button.appendChild(buy_btn);
 
     let view_btn = document.createElement("img");
@@ -128,8 +129,13 @@ function displayProducts() {
 
 }
 let getDisplayCart = document.querySelector(".display_cart")
-function displayCarts(){
-  for (let product of products){
+function displayCarts(event) {
+  loadData()
+  // for (let index in products){
+    let index = event.target.parentElement.parentElement.dataset.index;
+    console.log(index)
+    let product = products[index]
+
     let img_cart = document.createElement("img");
     img_cart.src = product.img
 
@@ -147,18 +153,27 @@ function displayCarts(){
     name.appendChild(h3)
     name.appendChild(button)
 
+    
+    let trash = document.createElement("div");
+    trash.id = "loop";
+
+    let img_trash = document.createElement("img");
+    img_trash.src = "../img/delete.png";
+    trash.appendChild(img_trash);
 
 
 
     getDisplayCart.appendChild(img_cart);
-    getDisplayCart.appendChild(name);
-  }
+    getDisplayCart.appendChild(name_cart);
+    getDisplayCart.appendChild(trash);
+  // }
 }
 
 // links to detail pages
 function getDetail(event){
   let index = event.target.parentElement.parentElement.dataset.index;
   let getPro = products[index]
+  
   console.log('index: ' ,getPro);
   localStorage.setItem('detail',JSON.stringify(getPro));
   location.href= "../page/detail.html"
@@ -204,7 +219,10 @@ close_cart.onclick = () => {
   cart.style.display = "none";
 
 }
+//================Add to cart =================
+function onClick_cart(){
 
+}
 
 
 displayProducts()

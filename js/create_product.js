@@ -1,5 +1,7 @@
 const dom_dialog = document.querySelector(".diolog");
 const dom_view = document.querySelector("#add_product");
+const dom_dialog_delete =document.querySelector(".dialog-delete");
+const dom_dialog_view = document.querySelector(".trash");
 let products = [
   {
     "id": 0,
@@ -119,7 +121,7 @@ function displayProducts() {
         let delete_pro = document.createElement("img");
         delete_pro.className = "trash";
         delete_pro.src = "../img/delete.png";
-        delete_pro.addEventListener("click",deleteProduct);
+        delete_pro.addEventListener("click",onDelete);
         action.appendChild(delete_pro);
 
         tbody.appendChild(tr_table);
@@ -174,14 +176,17 @@ function createPro() {
 
 }
 function deleteProduct(event){
-    let index = event.target.parentElement.parentElement.dataset.index;
-    products.splice(index, 1);
+  let index = event.target.parentElement.parentElement.dataset.index;
+  products.splice(index, 1);
+  hide(dom_dialog_delete)
 
     saveProduct();
     displayProducts();
 }
-let editProduct = document.querySelectorAll(".delete .edit"); 
+let delete_btn = document.querySelector(".yes");
+delete_btn.addEventListener("click", deleteProduct)
 
+let editProduct = document.querySelectorAll(".delete .edit"); 
 
 
 
@@ -207,12 +212,18 @@ function onClickAddPro(e){
 }
 function onClickCancel(e){
   hide(dom_dialog);
+  hide(dom_dialog_delete)
+}
+
+// dialog delete
+function onDelete(e){
+  show(dom_dialog_delete)
 }
 
 
 createBtn.addEventListener("click", createPro);
 
-const btnAddPro = dom_view.querySelectorAll("h2")[0];
+const btnAddPro = dom_view.querySelectorAll("h3")[0];
 btnAddPro.addEventListener("click",onClickAddPro);
 
 

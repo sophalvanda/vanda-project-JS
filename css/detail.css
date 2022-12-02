@@ -21,6 +21,9 @@
     width: 400px;
     margin-top: -10%;
 }
+.price{
+    color: red;
+}
 .share img{
     width: 10%;
 }
