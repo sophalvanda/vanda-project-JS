@@ -299,26 +299,46 @@ input{
     text-align: end;
 }
 .cart img{
- width: 50px;
- height: 50px;
+ width: 60px;
+ height: 60px;
 }
 .display_cart{
     display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    /* border-top: 1px solid black; */
+    border-bottom: 1px solid black;
+    
+}
+#display_cart{
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+.display_cart h3{
+    font-size: 15px;
 }
 .display_cart .text{
     margin-left: 10%;
 }
 .text button{
-    padding: 5px 20px 5px 20px;
+    padding: 5px 15px 5px 15px;
+    font-size: 10px;
+    color: red;
     
 }
 .display_cart #loop img{
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
     margin-top: -40%;
     margin-left: 60%;
+    margin-top: 50%;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+}
+.display_cart #loop img:hover{
+    background-color: red;
 }
 .cart #btn {
     margin-left: 40%;

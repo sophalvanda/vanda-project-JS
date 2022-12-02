@@ -177,8 +177,8 @@ function createPro() {
 }
 function deleteProduct(event){
   let index = event.target.parentElement.parentElement.dataset.index;
-  products.splice(index, 1);
   hide(dom_dialog_delete)
+  products.splice(index, 1);
 
     saveProduct();
     displayProducts();

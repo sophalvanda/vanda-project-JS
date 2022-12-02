@@ -55,9 +55,9 @@ function loadData() {
   displayProducts(detail)
   // products = getLocal;
 }
-function getDetail() {
-  location.href = "../page/detail.html"
-}
+// function getDetail() {
+//   location.href = "../page/detail.html"
+// }
 
 function displayProducts(getDetail) {
   console.log(getDetail.img);

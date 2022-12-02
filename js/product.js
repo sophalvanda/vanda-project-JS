@@ -128,7 +128,7 @@ function displayProducts() {
     
 
 }
-let getDisplayCart = document.querySelector(".display_cart")
+let list_cart = document.querySelector("#display_cart")
 function displayCarts(event) {
   loadData()
   // for (let index in products){
@@ -136,10 +136,13 @@ function displayCarts(event) {
     console.log(index)
     let product = products[index]
 
+    let create_cart = document.createElement("div");
+    create_cart.className = "display_cart";
+     
     let img_cart = document.createElement("img");
     img_cart.src = product.img
 
-    let name_cart = document.createElement("text");
+    // let name_cart = document.createElement("text");
 
     let name = document.createElement("div");
     name.className = "text";
@@ -147,10 +150,14 @@ function displayCarts(event) {
     let h3 = document.createElement("h3");
     h3.textContent = product.name
 
+    let h3_price = document.createElement("h3");
+    h3_price.textContent = "price";
+
     let button = document.createElement("button");
-    button.textContent = product.price;
+    button.textContent = product.price + " " + product.currency;
 
     name.appendChild(h3)
+    name.appendChild(h3_price)
     name.appendChild(button)
 
     
@@ -159,13 +166,16 @@ function displayCarts(event) {
 
     let img_trash = document.createElement("img");
     img_trash.src = "../img/delete.png";
+    img_trash.addEventListener("click" , delete_cart)
     trash.appendChild(img_trash);
 
 
 
-    getDisplayCart.appendChild(img_cart);
-    getDisplayCart.appendChild(name_cart);
-    getDisplayCart.appendChild(trash);
+    create_cart.appendChild(img_cart);
+    create_cart.appendChild(name);
+    create_cart.appendChild(trash);
+
+    list_cart.appendChild(create_cart)
   // }
 }
 
@@ -174,7 +184,7 @@ function getDetail(event){
   let index = event.target.parentElement.parentElement.dataset.index;
   let getPro = products[index]
   
-  console.log('index: ' ,getPro);
+  // console.log('index: ' ,getPro);
   localStorage.setItem('detail',JSON.stringify(getPro));
   location.href= "../page/detail.html"
 }
@@ -219,13 +229,27 @@ close_cart.onclick = () => {
   cart.style.display = "none";
 
 }
-//================Add to cart =================
-function onClick_cart(){
-
+//================Delete cart =================
+function delete_cart (event) {
+  // let index = event.target.parentElement.parentElement.dataset.index;
+  // romve_cart.splice(index, 1)
+  let remove_cart = document.querySelector(".display_cart")
+  remove_cart.remove()
 }
 
+// count the number of cart 
+let count_product = document.querySelector("#span");
+let count = 0
+function count_cart (event) {
+  if (event.target.parentElement.parentElement.dataset.index == buy_btn.addEventListener("click", displayCarts)){
+    count++;
+
+  }
+  count_product.textContent = count
+}
 
 displayProducts()
 // saveProduct()
 // loadData()
 // researchProduct()
+count_cart()
