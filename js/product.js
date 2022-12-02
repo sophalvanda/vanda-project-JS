@@ -128,13 +128,18 @@ function displayProducts() {
     
 
 }
-let list_cart = document.querySelector("#display_cart")
+let list_cart = document.querySelector("#display_cart");
+let count_cart = document.querySelector("#span");
+let count = 0;
 function displayCarts(event) {
   loadData()
   // for (let index in products){
     let index = event.target.parentElement.parentElement.dataset.index;
-    console.log(index)
     let product = products[index]
+    if (index){
+      count++
+      count_cart.textContent = count;
+    }
 
     let create_cart = document.createElement("div");
     create_cart.className = "display_cart";
@@ -235,18 +240,12 @@ function delete_cart (event) {
   // romve_cart.splice(index, 1)
   let remove_cart = document.querySelector(".display_cart")
   remove_cart.remove()
+  // count--
+  // count_cart.textContent = count
+  // displayCarts()
 }
 
-// count the number of cart 
-let count_product = document.querySelector("#span");
-let count = 0
-function count_cart (event) {
-  if (event.target.parentElement.parentElement.dataset.index == buy_btn.addEventListener("click", displayCarts)){
-    count++;
 
-  }
-  count_product.textContent = count
-}
 
 displayProducts()
 // saveProduct()

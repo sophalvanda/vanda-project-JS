@@ -121,7 +121,7 @@ function displayProducts() {
         let delete_pro = document.createElement("img");
         delete_pro.className = "trash";
         delete_pro.src = "../img/delete.png";
-        delete_pro.addEventListener("click",onDelete);
+        delete_pro.addEventListener("click",deleteProduct);
         action.appendChild(delete_pro);
 
         tbody.appendChild(tr_table);
@@ -176,12 +176,13 @@ function createPro() {
 
 }
 function deleteProduct(event){
+  // hide(dom_dialog_delete)
   let index = event.target.parentElement.parentElement.dataset.index;
-  hide(dom_dialog_delete)
   products.splice(index, 1);
-
-    saveProduct();
-    displayProducts();
+  
+  saveProduct();
+  displayProducts();
+  // onDelete()
 }
 let delete_btn = document.querySelector(".yes");
 delete_btn.addEventListener("click", deleteProduct)
@@ -212,13 +213,18 @@ function onClickAddPro(e){
 }
 function onClickCancel(e){
   hide(dom_dialog);
-  hide(dom_dialog_delete)
+  // hide(dom_dialog_delete)
 }
 
 // dialog delete
-function onDelete(e){
-  show(dom_dialog_delete)
-}
+// function onDelete(event){
+//   show(dom_dialog_delete)
+//   let index = event.target.parentElement.parentElement.dataset.index;
+//   products.splice(index, 1);
+//   saveProduct();
+//   displayProducts();
+
+// }
 
 
 createBtn.addEventListener("click", createPro);
