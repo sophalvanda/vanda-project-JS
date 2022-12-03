@@ -198,11 +198,11 @@ input{
 }
 #view img{
     margin: 1%;
-    margin-left: 90%;
+    /* margin-left: 90%; */
     width: 15%;
 }
 #view img{
-    margin-left: 200px;
+    margin-left: 190px;
 }
 #view img:hover{
     background-color: orange;
