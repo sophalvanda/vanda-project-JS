@@ -210,8 +210,8 @@ function deleteProduct(event){
   let index = event.target.parentElement.parentElement.dataset.index;
   products.splice(index, 1);
   
-  // saveProduct();
-  // displayProducts();
+  saveProduct();
+  displayProducts();
   // onDelete()
 }
 let delete_btn = document.querySelector(".yes");
@@ -243,18 +243,9 @@ function onClickAddPro(e){
 }
 function onClickCancel(e){
   hide(dom_dialog);
-  hide(dom_dialog_delete)
+
 }
 
-// dialog delete
-// function onDelete(event){
-//   show(dom_dialog_delete)
-//   let index = event.target.parentElement.parentElement.dataset.index;
-//   products.splice(index, 1);
-//   saveProduct();
-//   displayProducts();
-
-// }
 
 
 
