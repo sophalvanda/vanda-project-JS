@@ -112,20 +112,21 @@ select{
 table{
     word-wrap: break-word;
     border-collapse:collapse ;
-    margin-left: 6.5%;
+    margin-left: 10%;
     margin-right: 15%;
     margin-bottom: 5%;
+    /* width: 50%; */
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
     
 
 tr{
-    width: 100%;
+    width: 50%;
 }
 th,td{
     border: 1px solid black;
-    padding: 10px 80px 10px 80px;
+    padding: 10px 70px 10px 70px;
     /* border: none; */
     
 }
