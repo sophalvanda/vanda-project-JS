@@ -102,6 +102,10 @@ function displayProducts() {
         let tr_table = document.createElement("tr");
         tr_table.dataset.index = index;
 
+        let id_product = document.createElement("td");
+        id_product.textContent = product.id;
+        tr_table.appendChild(id_product);
+
         let td_table = document.createElement("td");
         td_table.className = "image";
         tr_table.appendChild(td_table);

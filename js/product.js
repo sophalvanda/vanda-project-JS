@@ -155,7 +155,7 @@ function showCartDetails(data) {
           <button>${price + " " + element.domeHTML.currency}</button><br>
       </div>
       <div id="loop">
-          <img class="trash" " src="../img/delete.png" alt="">
+          <img class="trash" src="../img/delete.png" alt="">
       </div><br>
     </div>
     `
@@ -282,6 +282,11 @@ function delete_cart(event) {
   });
 
 }
+// function remove_cart(event){
+//   if (event.target.className == "trash"){
+//     event.target.parentElement.remove()
+//   }
+// }
 
 displayProducts()
 saveProduct()
