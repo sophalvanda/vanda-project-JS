@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>V&D Online Shop</title>
+        <link rel="icon" type="image/x-icon" href="../img/logo.png">
         <link rel="stylesheet" href="../css/navbar.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
@@ -23,8 +24,8 @@
         </div>
         <div class="nav-right">
             <button> <a href="../index.html">Home</a></button>
-            <button> <a href="product.html">Product</a></button>
-            <button> <a href="">Create-Product</a></button>
+            <button > <a href="product.html" >Product</a></button>
+            <button class="active"> <a href="">Create-Product</a></button>
             <!-- <button> <a href="">Card</a></button> -->
             <!-- <button> <a href="">Sign in</a></button> -->
             <i class="material-icons" id="menu">menu</i>
@@ -43,27 +44,27 @@
                 <h1>Add Products</h1><br><br>
                 <div class="input">
                     <p>image</p>
-                    <input type="text" class="img_product" placeholder="Image product">
+                    <input type="text" class="img_product" placeholder="Image product" required>
                 </div><br>
                 <div class="input">
                     <p>Name Product</p>
-                    <input type="text" class="product" placeholder="name product">
+                    <input type="text" class="product" placeholder="name product" required>
                 </div><br>
                 <div class="input">
                     <p>Description</p>
-                    <input type="text" class="color" placeholder="color product">
+                    <input type="text" class="color" placeholder="color product" required>
                 </div><br>
                 <div class="input">
                     <p>Price</p>
-                    <input type="number" class="price" placeholder="price">
+                    <input type="number" class="price" placeholder="price" required>
                 </div><br>
-                <div class="currency">
+                <div >
                     <p>Currency</p>
                     <!-- <input type="text" class="currency" placeholder="Currency"> -->
-                    <select name="select" id="select">
+                    <select name="select" id="select" required class="currency">
                         <option disabled selected>currency</option>
-                        <option value="usd">USD</option>
-                        <option value="riel">Riel</option>
+                        <option value="USD">USD</option>
+                        <option value="Riel">Riel</option> 
                     </select>
                 </div><br>
                 <div class="btn">
@@ -77,7 +78,7 @@
                 <p>Do you want delete this product?</p>
                 <div class="button">
                     <button class="no" onclick=" onClickCancel()">No</button>
-                    <button class="yes" onclick="isDelete(true)">Yes</button>
+                    <button class="yes" onclick="deleteProduct()">Yes</button>
                 </div>
             </dialog>
         </div>

@@ -21,10 +21,10 @@ let products = [
   },
   {
     "id": 2,
-    "img": "https://www.transparentpng.com/thumb/shirt/kXy7FB-yellow-shirt-clipart-png-file.png",
+    "img": "https://o.remove.bg/downloads/6eaa7925-7455-4c45-9522-1d8bd3f0812c/png-clipart-t-shirt-polo-shirt-clothing-sleeve-black-t-shirt-black-crew-neck-t-shirt-tshirt-fashion-removebg-preview.png",
     "name": "shirt",
-    "color": "yellow",
-    "price": "20",
+    "color": "black",
+    "price": "40",
     "currency": "USD"
   },
   {
@@ -40,7 +40,31 @@ let products = [
     "img": "https://www.pngall.com/wp-content/uploads/2016/04/Dress-Shirt-Download-PNG.png",
     "name": "shirt",
     "color": "blue",
-    "price": "20",
+    "price": "50",
+    "currency": "USD"
+  },
+  {
+    "id": 5,
+    "img": "https://www.transparentpng.com/thumb/shirt/oYBUkZ-white-t-shirt-clipart-hd.png",
+    "name": "shirt",
+    "color": "white",
+    "price": "10",
+    "currency": "USD"
+  },
+  {
+    "id": 6,
+    "img": "https://www.pngarts.com/files/5/Plain-Blue-T-Shirt-PNG-Picture.png",
+    "name": "shirt",
+    "color": "blue",
+    "price": "30",
+    "currency": "USD"
+  },
+  {
+    "id": 7,
+    "img": "https://o.remove.bg/downloads/2637efe9-2ba6-4423-8362-3d2d60eb0a8d/182-1823358_black-t-shirt-t-shirt-hd-png-download-removebg-preview.png",
+    "name": "shirt",
+    "color": "gray",
+    "price": "50",
     "currency": "USD"
   }
 ]
@@ -91,7 +115,7 @@ function displayProducts() {
         td_table.appendChild(image)
 
         let nameProduct = document.createElement("td");
-        nameProduct.textContent = product.name + product.id;
+        nameProduct.textContent = product.name;
         tr_table.appendChild(nameProduct);
 
         let color = document.createElement("td");
@@ -167,8 +191,10 @@ function createPro() {
   objCreate.currency = currencyInput.value
   objCreate.img = imageInput.value
   objCreate.color = colorInput.value
-  
+
+
   products.splice(indexProduct, 0, objCreate);
+  
   saveProduct();
 
   displayProducts();
@@ -180,8 +206,8 @@ function deleteProduct(event){
   let index = event.target.parentElement.parentElement.dataset.index;
   products.splice(index, 1);
   
-  saveProduct();
-  displayProducts();
+  // saveProduct();
+  // displayProducts();
   // onDelete()
 }
 let delete_btn = document.querySelector(".yes");
@@ -213,7 +239,7 @@ function onClickAddPro(e){
 }
 function onClickCancel(e){
   hide(dom_dialog);
-  // hide(dom_dialog_delete)
+  hide(dom_dialog_delete)
 }
 
 // dialog delete
@@ -225,7 +251,7 @@ function onClickCancel(e){
 //   displayProducts();
 
 // }
-// delet cart
+
 
 
 

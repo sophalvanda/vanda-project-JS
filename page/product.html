@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>V&D Online Shop</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
     <link rel="stylesheet" href="../css/navbar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
@@ -25,7 +26,7 @@
         </div>
         <div class="nav-right">
             <button> <a href="../index.html">Home</a></button>
-            <button> <a href="#">Product</a></button>
+            <button class="active"> <a href="#"  >Product</a></button>
             <button> <a href="create_product.html">Create-Product</a></button>
             <!-- <button> <a href="">Card</a></button> -->
             <!-- <button> <a href="">Sign in</a></button> -->
@@ -56,8 +57,8 @@
                     <img src="../img/delete.png" alt="">
                 </div><br> -->
             </div>
-        </div><br><br>
-        <p>Total <span>0$</span></p><br><br>
+        </div>
+        <p id="total">Total: <span class="total">0$</span></p><br><br>
         <button id="btn">Buy now</button>
     </div>
     <div class="header">
@@ -69,7 +70,7 @@
         </div>
     </div>
     <div class="title">
-        <h1 id="title">Shirts</h1>
+        <h2 id="title">List of products</h2>
     </div>
     <div class="scrolling">
        
@@ -91,181 +92,6 @@
             <img src="../img/vanda2.png" alt="">
         </div>
     </div>
-
-    <div class="title">
-        <h1 id="title">Pants</h1>
-    </div>
-    <div class="scrolling-wrapper">
-        <div class="card">
-            <img src="../img/pants.png" alt="">
-            <h3>Pants</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="pants_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../img/pants.png" alt="">
-            <h3>Pants</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="pants_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../img/pants.png" alt="">
-            <h3>Pants</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="pants_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../img/pants.png" alt="">
-            <h3>Pants</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="pants_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../img/pants.png" alt="">
-            <h3>Pants</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="pants_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="title">
-        <h1 id="title">Pants</h1>
-    </div>
-    <div class="scrolling-wrapper" id="scrolling-wrapper">
-        <div class="card" id="card">
-            <img src="../img/shose.png" alt="">
-            <h3>shose</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="shose_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-        <div class="card" id="card">
-            <img src="../img/shose.png" alt="">
-            <h3>shose</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="shose_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-        <div class="card" id="card">
-            <img src="../img/shose.png" alt="">
-            <h3>shose</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="shose_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-        <div class="card" id="card">
-            <img src="../img/shose.png" alt="">
-            <h3>shose</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="shose_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-        <div class="card" id="card">
-            <img src="../img/shose.png" alt="">
-            <h3>Pants</h3>
-            <div class="icon">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-            </div>
-            <p class="price">30$</p>
-            <div class="img" id="view">
-                <a href=""><img src="../img/buy.png" alt=""></a>
-                <a href="shose_product.html"><img src="../img/view.png" alt=""></a>
-            </div>
-        </div>
-    </div>
-
-
-
 
     <div class="footer">
         <div class="footer-top">

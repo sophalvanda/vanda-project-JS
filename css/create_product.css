@@ -1,4 +1,6 @@
-
+.nav-right .active{
+    background-color: orange;
+}
 .delete img:hover{
     background-color: orange;
 }
