@@ -102,9 +102,7 @@ function displayProducts() {
         let tr_table = document.createElement("tr");
         tr_table.dataset.index = index;
 
-        let id_product = document.createElement("td");
-        id_product.textContent = product.id;
-        tr_table.appendChild(id_product);
+        
 
         let td_table = document.createElement("td");
         td_table.className = "image";
@@ -208,7 +206,11 @@ function createPro() {
 function deleteProduct(event){
   // hide(dom_dialog_delete)
   let index = event.target.parentElement.parentElement.dataset.index;
-  products.splice(index, 1);
+  let message = "Do you want to remove this product?";
+  if (confirm(message)== true) {
+
+    products.splice(index, 1);
+  }
   
   saveProduct();
   displayProducts();

@@ -112,7 +112,7 @@ select{
 table{
     word-wrap: break-word;
     border-collapse:collapse ;
-    margin-left: 6.5%;
+    margin-left: 8%;
     margin-right: 15%;
     margin-bottom: 5%;
     /* width: 50%; */
@@ -126,7 +126,7 @@ tr{
 }
 th,td{
     border: 1px solid black;
-    padding: 10px 70px 10px 70px;
+    padding: 10px 80px 10px 80px;
     /* border: none; */
     
 }

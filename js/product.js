@@ -155,11 +155,10 @@ function showCartDetails(data) {
           <button>${price + " " + element.domeHTML.currency}</button><br>
       </div>
       <div id="loop">
-          <img class="trash" src="../img/delete.png" alt="">
+      <img src="../img/delete.png" class="trash" alt="" onclick="delete_cart()">
       </div><br>
     </div>
     `
-
 
   });
   create_cart.innerHTML = string
@@ -278,7 +277,6 @@ function delete_cart(event) {
       element.style.display = 'none'
 
     }
-
   });
 
 }
