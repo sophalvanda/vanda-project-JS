@@ -193,12 +193,9 @@ function createPro() {
   objCreate.currency = currencyInput.value
   objCreate.img = imageInput.value
   objCreate.color = colorInput.value
-
-
   products.splice(indexProduct, 0, objCreate);
   
   saveProduct();
-
   displayProducts();
   clearInput();
 
