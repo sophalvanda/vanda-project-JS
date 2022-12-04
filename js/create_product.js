@@ -263,7 +263,7 @@ btnCancel.addEventListener("click",onClickCancel)
 
 
 // Main ===================
-// saveProduct();
+saveProduct();
 
 loadData();
 displayProducts();
